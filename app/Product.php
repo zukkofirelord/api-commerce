@@ -13,7 +13,9 @@ class Product extends Model
 {
     //
     use SoftDeletes;
-    
+    protected $hidden = [
+        'pivot'
+    ];
     const AVAILABLE_PRODUCT = 'available';
     const UNAVAILABLE_PRODUCT = 'unvailable';
     
